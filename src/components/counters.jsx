@@ -3,6 +3,8 @@ import Counter from "./counter";
 
 class Counters extends Component {
   render() {
+    console.log("CounterSsS - Render");
+
     // Use object destructuring to obtain the properties from props that you are interested in.
     const { onReset, counters, onIncrement, onDelete } = this.props;
 

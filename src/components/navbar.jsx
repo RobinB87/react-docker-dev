@@ -3,6 +3,8 @@ import React, { Component } from "react";
 // Stateless functional component
 // In these components you need to add props as param
 const NavBar = ({ totalCounters }) => {
+  console.log("NavBar - Render");
+
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">

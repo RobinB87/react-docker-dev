@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 // Stateless functional component
 // In these components you need to add props as param

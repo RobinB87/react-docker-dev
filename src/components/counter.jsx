@@ -8,7 +8,7 @@ class Counter extends Component {
   // Bind event handlers via constructor + super and method.bind(this),
   // or via arrow function:
   handleIncrement = () => {
-    console.log("Increment clicked", this);
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {

@@ -5,11 +5,19 @@ class Counter extends Component {
     count: 0,
   };
 
+  // Bind event handlers via constructor + super and method.bind(this),
+  // or via arrow function:
+  handleIncrement = () => {
+    console.log("Increment clicked", this);
+  };
+
   render() {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
+        <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">
+          Increment
+        </button>
       </div>
     );
   }

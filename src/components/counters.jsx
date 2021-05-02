@@ -20,8 +20,26 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
+  handleIncrement = (counter) => {
+    // We do not update the state directly.
+    // Instead, create new counters array and give that to the set state method and have React update the state.
+
+    // Use the spread operator (...) to be able to clone the exact array
+    const counters = [...this.state.counters];
+
+    // However, this seems to work exactly like that as
+    // const counters = this.state.counters;
+
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+
+    this.setState({ counters });
+  };
+
   handleDelete = (counterId) => {
     const counters = this.state.counters.filter((c) => c.id !== counterId);
+
     // this.setState({ counters: counters }); as key and value are equal, simplify like:
     this.setState({ counters });
   };
@@ -33,7 +51,7 @@ class Counters extends Component {
           Reset
         </button>
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} onDelete={this.handleDelete} counter={counter} />
+          <Counter key={counter.id} onIncrement={this.handleIncrement} onDelete={this.handleDelete} counter={counter} />
         ))}
       </div>
     );

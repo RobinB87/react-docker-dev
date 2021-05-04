@@ -1,3 +1,9 @@
+# Intro
+
+First experience with React and with developing in Docker Dev containers as well.
+Hot reloading is possible when choosing: "cloning the repository in Docker volume (for better I/O performance)".
+For this, a connection with git is required.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

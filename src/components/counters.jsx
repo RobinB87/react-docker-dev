@@ -6,7 +6,7 @@ class Counters extends Component {
     console.log("CounterSsS - Render");
 
     // Use object destructuring to obtain the properties from props that you are interested in.
-    const { onReset, counters, onIncrement, onDelete } = this.props;
+    const { onReset, counters, onInOrDecrement, onDelete } = this.props;
 
     return (
       <div>
@@ -14,7 +14,7 @@ class Counters extends Component {
           Reset
         </button>
         {counters.map((counter) => (
-          <Counter key={counter.id} onIncrement={onIncrement} onDelete={onDelete} counter={counter} />
+          <Counter key={counter.id} onInOrDecrement={onInOrDecrement} onDelete={onDelete} counter={counter} />
         ))}
       </div>
     );
